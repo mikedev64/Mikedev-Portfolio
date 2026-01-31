@@ -1,0 +1,20 @@
+section.page-section {
+        position: relative;
+	display: flex;
+	flex-direction: column;
+	height: fit-content;
+	min-height: 75dvh;
+	height: fit-content;
+	max-height: 100dvh;
+
+	&:first-of-type {
+                align-items: center;
+                justify-content: center;
+		box-sizing: border-box;
+	}
+
+	&[data-name="Proyectos"] {
+		max-height: calc(100dvh - 60px);
+		min-height: calc(100dvh - 60px);
+	}
+}

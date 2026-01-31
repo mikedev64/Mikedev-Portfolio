@@ -1,0 +1,10 @@
+---
+import { ProjectsContext, ProjectsData } from './context/index';
+import GroupContent from './components/group';
+
+import './projects.css';
+---
+
+<ProjectsContext.Provider value={ProjectsData}>
+	<GroupContent client:load />
+</ProjectsContext.Provider>

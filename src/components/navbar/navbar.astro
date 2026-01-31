@@ -1,0 +1,33 @@
+---
+import Tooltip from '../tooltip/tooltip.astro';
+import CharacterDecorator from './components/character-decorator.astro';
+import OptionsList from './components/options-list.astro';
+
+import './navbar.css';
+---
+
+<nav id="navbar" class="--component">
+	<Tooltip type='float' text="" small={true} />
+	<div class="left">
+		<div class="character-identity">
+			<div class="decorator">
+				<CharacterDecorator />
+			</div>
+			<img
+				src="exusiai-fanart-no_oc.webp"
+				alt="exusiai fanart no_oc"
+				width="40px"
+				fetchpriority="high"
+				height="40px"
+				class="character"
+			/>
+		</div>
+		<div class="name-details">
+			<span class="name">Joan Cardozo</span>
+		</div>
+	</div>
+	<div class="right">
+		<OptionsList />
+	</div>
+</nav>
+<script src="./navbar.ts"></script>

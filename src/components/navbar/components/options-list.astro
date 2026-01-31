@@ -1,0 +1,20 @@
+---
+import { listElements } from '../assets/constants.ts';
+---
+
+<div class="options-list">
+	<div class="pc">
+		<div class="selector"></div>
+		<ul class="list-elements">
+			{
+				listElements.map(({ identifier, Icon, ariaLabel }) => (
+					<li class:list={['elements', identifier, identifier === 'Inicio' ? 'Select' : '']}>
+						<a href={`#${identifier}`} aria-label={ariaLabel} data-value={identifier}>
+							<Icon />
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+</div>

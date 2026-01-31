@@ -1,0 +1,149 @@
+span.tooltip {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 24px;
+
+	font-family: 'Satoshi-Bold';
+	font-size: 24px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 24px;
+	background-color: var(--secondary);
+	color: var(--background);
+
+        &.shadow {
+                box-shadow: 0 0 4px var(--seccond-accent);
+        }
+
+        &.small {
+                font-size: 16px;
+        }
+}
+
+*:hover > span.tooltip.link {
+	transform: translateY(-50px);
+	transition: all 0.2s ease;
+	animation: 0.3s link cubic-bezier(0.4, 0, 0.2, 2) both;
+
+	@starting-style {
+		transform: translateY(0);
+		padding: 0;
+		width: 0;
+	}
+}
+
+* > span.tooltip.float {
+	transform: translateY(0);
+	transition: all 0.2s ease;
+	animation: 0.3s float cubic-bezier(0.4, 0, 0.2, 3) forwards;
+
+	@starting-style {
+		transform: translateY(0);
+		padding: 0;
+		width: 0;
+	}
+
+}
+* > span.tooltip.unfloat {
+	left: 50%;
+	transform: translateY(0px) translateX(-50%);
+	transition: all 0.2s ease;
+	animation: 0.3s unfloat cubic-bezier(0.4, 0, 0.2, 3) forwards;
+
+	@starting-style {
+		left: 50%;
+		transform: translateY(0) translateX(-50%);
+		padding: 0;
+		width: 0;
+	}
+
+}
+
+@keyframes link {
+	0% {
+		color: var(--secondary);
+		transform: translateY(0);
+		padding: 0;
+		width: 0;
+	}
+
+	75% {
+		color: var(--secondary);
+		transform: translateY(-50px);
+		width: 0;
+	}
+
+	80% {
+		padding: 0 2.5px;
+	}
+
+	100% {
+		color: var(--background);
+		padding: 2.5px 10px;
+		transform: translateY(-50px);
+		width: fit-content;
+	}
+}
+
+@keyframes float {
+	0% {
+		left: 50%;
+		color: var(--secondary);
+		transform: translateY(0) translateX(-50%);
+		padding: 0;
+		width: 0;
+	}
+
+	75% {
+		left: 50%;
+		color: var(--secondary);
+		transform: translateY(0) translateX(-50%);
+		width: 0;
+	}
+
+	80% {
+		left: 50%;
+		padding: 0 2.5px;
+	}
+
+	100% {
+		left: 50%;
+		color: var(--background);
+		padding: 2.5px 10px;
+		transform: translateY(0) translateX(-50%);
+		width: fit-content;
+	}
+}
+
+@keyframes unfloat {
+	0% {
+		left: 50%;
+		color: var(--background);
+		padding: 5px 10px;
+		transform: translateY(0) translateX(-50%);
+		width: fit-content;
+	}
+
+	75% {
+		left: 50%;
+		padding: 0;
+	}
+
+	80% {
+		left: 50%;
+		transform: translateY(0) translateX(-50%);
+		width: 0;
+	}
+
+	100% {
+		left: 50%;
+		color: var(--secondary);
+		transform: translateY(0) translateX(-50%);
+		padding: 0;
+		width: 0;
+	}
+}

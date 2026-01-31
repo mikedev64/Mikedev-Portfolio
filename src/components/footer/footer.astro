@@ -1,0 +1,90 @@
+---
+import Tooltip from '../tooltip/tooltip.astro';
+import { footerFirstListElements, footerSecondListElements } from './assets/constants';
+
+import './footer.css';
+---
+
+<footer class="footer">
+	<div class="content">
+		<div class="external-links">
+			<ul class="firt-links">
+				{
+					footerFirstListElements.map(
+						({ identifier, Icon, link, ariaLabel, visible }) =>
+							visible && (
+								<li
+									class:list={[
+										'element',
+										identifier,
+									]}
+								>
+									<Tooltip
+										shadow={false}
+										type="link"
+										text={identifier}
+									/>
+									<a
+										target="_blank"
+										aria-label={
+											ariaLabel
+										}
+										href={link}
+										class="link"
+									>
+										<Icon />
+									</a>
+								</li>
+							)
+					)
+				}
+			</ul>
+			<div class="separator"></div>
+			<ul class="second-links">
+				{
+					footerSecondListElements.map(
+						({ identifier, Icon, link, ariaLabel, visible }) =>
+							visible && (
+								<li
+									class:list={[
+										'element',
+										identifier,
+									]}
+								>
+									<Tooltip
+										shadow={false}
+										type="link"
+										text={identifier}
+									/>
+									<a
+										target="_blank"
+										aria-label={
+											ariaLabel
+										}
+										href={link}
+										class="link"
+									>
+										<Icon />
+									</a>
+								</li>
+							)
+					)
+				}
+			</ul>
+		</div>
+		<img
+			src="/seia-chalk.webp"
+			alt="Seia Chibi (Chalk) - MikeDraw Pixiv"
+			class="seia-chibi"
+			width="305"
+			height="223"
+		/>
+	</div>
+	<span class="credits"
+		>Hecho con amor ❤ | Inspirado en&nbsp;<a
+			target="_blank"
+			href="https://endfield.gryphline.com/en-us"
+			class="highlighted">Arknights Endifeld</a
+		>&nbsp;| 2026</span
+	>
+</footer>

@@ -1,0 +1,14 @@
+---
+interface Props {
+	type: 'float' | 'link';
+        text: string;
+        shadow?: boolean;
+        small?: boolean;
+}
+
+const { type, text, shadow = true, small = false } = Astro.props
+
+import './tooltip.css'
+---
+
+<span class:list={['tooltip', type === 'float' ? '' : type, shadow ? 'shadow' : '', small ? 'small' : '']}>{text}</span>

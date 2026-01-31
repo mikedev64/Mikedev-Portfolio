@@ -1,0 +1,68 @@
+---
+interface Props {
+	title: string;
+	noSeparator: boolean;
+	ariaLabel?: string;
+}
+
+const { title, noSeparator = false, ariaLabel } = Astro.props;
+
+import './separator.css';
+---
+
+<a
+	href={`#${title}`}
+	aria-label={ariaLabel ?? 'Texto alternativo sin modificar'}
+	id={title}
+	class="hook"></a>
+<h2 class:list={['separator', noSeparator ? 'noSeparator' : '']} data-value={title}>
+	{title}
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		viewBox="0 0 1440 275"
+		preserveAspectRatio="none"
+		fill="none"
+	>
+		<rect
+			width="1440"
+			height="275"
+			transform="matrix(-1 0 0 1 1440 0)"
+			fill="url(#pattern0_259_924)"></rect>
+		<defs>
+			<pattern
+				id="pattern0_259_924"
+				patternUnits="userSpaceOnUse"
+				patternTransform="matrix(10.0232 0 0 10.0232 716.023 133.523)"
+				preserveAspectRatio="none"
+				viewBox="0 -4.11272e-06 200.465 200.465"
+				width="1"
+				height="1"
+			>
+				<use
+					xlink:href="#pattern0_259_924_inner"
+					transform="translate(-100.232 -100.232)"></use>
+				<use
+					xlink:href="#pattern0_259_924_inner"
+					transform="translate(100.232 -100.232)"></use>
+				<use
+					xlink:href="#pattern0_259_924_inner"
+					transform="translate(-200.465 0)"></use>
+				<g id="pattern0_259_924_inner">
+					<rect
+						y="17.6777"
+						width="25"
+						height="200"
+						transform="rotate(-45 0 17.6777)"
+						fill="#4B4B4B"></rect>
+				</g>
+				<use
+					xlink:href="#pattern0_259_924_inner"
+					transform="translate(-100.232 100.232)"></use>
+				<use
+					xlink:href="#pattern0_259_924_inner"
+					transform="translate(100.232 100.232)"></use>
+			</pattern>
+		</defs>
+	</svg>
+</h2>

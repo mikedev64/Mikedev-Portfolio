@@ -1,0 +1,54 @@
+---
+import GmailLogo from './assets/gmail.svg';
+import LinkedIn from './assets/linkedin.svg';
+import PaperClip from './assets/paperclip.svg';
+
+import './home.css';
+---
+
+<div id="home-section">
+	<img
+		src="/images/profile-picture.webp"
+		width="240"
+		height="240"
+		alt="Joan Sebastian Cardozo Salinas MikeDev"
+		fetchpriority="high"
+		class="profile-picture"
+	/>
+	<div class="information">
+		<div class="top">
+			<h1 class="name">
+				<span class="brackets">[</span>&nbsp;Joan Sebastian Cardozo
+				Salinas&nbsp;<span class="brackets">]</span>
+			</h1>
+			<span class="position">Desarrollador Web Frontend</span>
+		</div>
+		<p class="desciption">
+			Con 3 años de experiencia en JavaScript y su ecosistema. Trabajo
+			desarrollando aplicaciones web y escritorio, con el objetivo de construir
+			soluciones personalizadas que combinen rendimiento, personalización y
+			facilidad de uso
+		</p>
+		<ul class="fast-links">
+			<li class="elements">
+				<button class="email" data-value="correo copiado">
+					<GmailLogo />
+					joans.cardozos@gmail.com
+				</button>
+			</li>
+			<li class="elements">
+				<a href="https://www.linkedin.com/in/joanscardozos/" target="_blank">
+					<LinkedIn />
+					joanscardozos
+				</a>
+			</li>
+			<li class="elements">
+				<a href="/docs/CurriculumVitae-JoanCardozo.pdf" target="_blank">
+					<PaperClip />
+					curriculum vitae
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<script src="./home.ts"></script>

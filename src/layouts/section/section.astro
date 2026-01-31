@@ -1,0 +1,18 @@
+---
+interface Props {
+	title: string;
+	noSeparator?: boolean;
+	ariaLabel?: string;
+}
+
+const { title, noSeparator = false, ariaLabel } = Astro.props;
+
+import Separator from '../../components/separator/separator.astro';
+import './section.css'
+---
+
+<script src="./section.ts"></script>
+<section data-name={title} class="page-section">
+	<Separator title={title} ariaLabel={ariaLabel} noSeparator={noSeparator}/>
+	<slot />
+</section>

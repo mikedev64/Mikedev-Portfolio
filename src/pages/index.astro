@@ -1,0 +1,27 @@
+---
+import Section from '../layouts/section/section.astro';
+import Layout from '../layouts/Layout.astro';
+import Home from '../components/sections/home/home.astro';
+import Projects from '../components/sections/projects/projects.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<Section title="Inicio" ariaLabel="Seccion de inicio/sobre mi" noSeparator>
+		<Home />
+	</Section>
+	<Section title="Experiencia" ariaLabel="Seccion de experiencia laboral">
+		<a href="">XD</a>
+	</Section>
+	<Section title="Proyectos" ariaLabel="Seccion de proyectos personales">
+		<Projects />
+	</Section>
+	<Section title="Certificaciones" ariaLabel="Seccion de certificados y reconocimientos">
+		<a href="">XD</a>
+	</Section>
+	<Section title="Comisiones" ariaLabel="Seccion de comisiones solicitadas por clientes">
+		<a href="">XD</a>
+	</Section>
+</Layout>

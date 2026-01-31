@@ -1,0 +1,1 @@
+export const navbarValidValues: string[] = ['Inicio', 'Experiencia', 'Proyectos', 'Certificaciones', 'Comisiones', ]

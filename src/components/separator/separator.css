@@ -1,0 +1,170 @@
+a.hook {
+	top: 0;
+	position: absolute;
+	height: 0;
+	width: 100%;
+}
+
+h2.separator {
+	z-index: 3;
+	position: sticky;
+	top: 60px;
+	display: grid;
+	place-items: center;
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	height: 35px;
+	box-shadow: 0 -4px 4px 0 #0f0f0f;
+	background-color: var(--background-50);
+
+	color: var(--seccond-accent);
+	font-family: 'Satoshi-Medium';
+	font-size: 24px;
+	text-shadow: 1px 1px 4px var(--background);
+
+	&.noSeparator {
+		max-height: 0;
+	}
+
+	svg {
+		z-index: -1;
+		position: absolute;
+		width: 100dvw;
+		display: grid;
+		place-items: center;
+
+		@media (max-width: 1000px) {
+			width: 1500px;
+		}
+	}
+
+	&.active {
+		background: var(--secondary);
+		color: var(--background);
+		animation: activeSeparator 0.1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+		will-change: background;
+		transition: color 0.2s ease;
+
+		svg {
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+	}
+}
+
+@keyframes activeSeparator {
+	0% {
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			transparent 49.5%,
+			var(--secondary) 50%,
+			transparent 50.5%,
+			transparent 100%
+		);
+	}
+
+	10% {
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			transparent 45%,
+			var(--secondary) 50%,
+			transparent 55%,
+			transparent 100%
+		);
+	}
+
+	20% {
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			transparent 40%,
+			var(--secondary) 50%,
+			transparent 60%,
+			transparent 100%
+		);
+	}
+
+	30% {
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			transparent 35%,
+			var(--secondary) 50%,
+			transparent 65%,
+			transparent 100%
+		);
+	}
+
+	40% {
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			transparent 30%,
+			var(--secondary) 50%,
+			transparent 70%,
+			transparent 100%
+		);
+	}
+
+	50% {
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			transparent 25%,
+			var(--secondary) 50%,
+			transparent 75%,
+			transparent 100%
+		);
+	}
+
+	60% {
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			transparent 20%,
+			var(--secondary) 50%,
+			transparent 80%,
+			transparent 100%
+		);
+	}
+
+	70% {
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			transparent 15%,
+			var(--secondary) 50%,
+			transparent 85%,
+			transparent 100%
+		);
+	}
+
+	80% {
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			transparent 10%,
+			var(--secondary) 50%,
+			transparent 90%,
+			transparent 100%
+		);
+	}
+
+	90% {
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			transparent 5%,
+			var(--secondary) 50%,
+			transparent 95%,
+			transparent 100%
+		);
+	}
+
+	100% {
+		background: var(--secondary);
+	}
+}
