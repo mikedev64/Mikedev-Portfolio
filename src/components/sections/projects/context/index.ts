@@ -7,7 +7,7 @@ export const projects = [
 	{
 		name: 'GameScriptJs - JavaScript 2D Game Engine',
 		description:
-			'Motor de videojuegos agnostico para 2D y novelas visuales en JavaScript o TypeScript. Integrando una arquitectura modular para extender y personalizar el flujo de desarrollo, ofreciendo un enfoque ordenado para proyectos de cualquier escala, incluyendo un editor personalizable con un estilo inspirado en Unity o Blender, permitiendo la exportación a PC y navegador',
+			'Motor de videojuegos para experiencias 2D y novelas visuales en JavaScript o TypeScript. Integrando una arquitectura modular para extender y personalizar el flujo de desarrollo, ofreciendo un enfoque ordenado para proyectos de cualquier escala, incluyendo un editor personalizable con un estilo inspirado en Unity o Blender, permitiendo la exportación a PC y navegador',
 		icon: '/images/sections/projects/gamescript_temporal_logo.webp',
 		thumbnail: '/images/sections/projects/gamescript_temporal_logo.webp',
 		background: ['/images/sections/projects/gamescriptjs-background.webp'],
