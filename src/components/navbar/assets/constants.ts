@@ -6,7 +6,7 @@ import Commissions from './commissions.svg';
 
 export const listElements = [
 	{
-		identifier: 'Inicio',
+		identifier: 'SobreMi',
 		Icon: AboutMe,
 		ariaLabel: 'Lleva al area de inicio',
 	},
