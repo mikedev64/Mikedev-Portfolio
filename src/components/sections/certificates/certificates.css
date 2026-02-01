@@ -1,0 +1,70 @@
+div.achievements {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	overflow: hidden;
+	overflow-x: scroll;
+	scroll-padding: 0 calc(50% - 250px);
+	scroll-snap-type: x mandatory;
+        padding: 100px calc(50% - 250px);
+	box-sizing: border-box;
+        
+	&::-webkit-scrollbar {
+                height: 0;
+	}
+        
+	@media (min-width: 1280px) {
+                & {
+                        gap: 50px;
+                        padding: 100px 0;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        height: calc(100% - 35px);
+			justify-content: center;
+		}
+	}
+
+	div.certificate {
+		z-index: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		/* min-width: calc(400px + 100px); */
+		max-width: 550px;
+		flex-shrink: 0;
+		scroll-snap-align: center;
+
+		img.image {
+			background: var(--background);
+			width: calc(100% - 100px);
+			height: calc(100% - 75px);
+			max-width: calc(650px - 100px);
+			min-width: 300px;
+			max-height: 422px;
+			object-fit: cover;
+			transition: all 0.2s ease;
+			overflow: hidden;
+
+			&:hover {
+				object-fit: contain;
+			}
+		}
+
+		span.name {
+			border: none;
+			border-top: 10px solid var(--primary);
+			display: grid;
+			place-content: center;
+			width: 100%;
+			max-width: 750px;
+			height: 75px;
+			max-height: 75px;
+			text-align: center;
+			font-family: 'Satoshi-Bold';
+			font-size: 24px;
+			color: var(--seccond-accent);
+		}
+	}
+}

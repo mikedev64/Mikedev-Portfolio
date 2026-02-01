@@ -92,7 +92,7 @@ div.background {
 		min-height: 250px;
 		height: fit-content;
 		gap: 20px;
-		
+
 		@media (max-width: 1050px) {
 			justify-content: center;
 			gap: 0px;
@@ -131,6 +131,10 @@ div.background {
 					overflow: visible;
 					-webkit-line-clamp: none;
 					line-clamp: none;
+				}
+
+				@media (max-width: 1050px) {
+					text-align: center;
 				}
 			}
 
@@ -283,8 +287,8 @@ div.background {
 			gap: 50px;
 			height: 130px;
 
-			@media (min-width: 500px) {
-				margin: 0 0 25px;
+			@media (max-width: 1050px) {
+				margin: 0 0 25px 0;
 			}
 
 			div.container {
@@ -323,9 +327,6 @@ div.background {
 				cursor: pointer;
 
 				@media (max-width: 500px) {
-					& {
-						display: none;
-					}
 				}
 
 				* {

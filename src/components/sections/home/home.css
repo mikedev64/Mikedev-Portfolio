@@ -1,7 +1,11 @@
 div#home-section {
 	display: flex;
-        align-items: center;
+	flex-wrap: wrap;
+	align-items: center;
 	gap: 50px;
+	justify-content: center;
+	height: fit-content;
+	min-height: 75dvh;
 
 	div.information {
 		width: fit-content;
@@ -51,13 +55,13 @@ div#home-section {
 		ul.fast-links {
 			width: 100%;
 			flex-wrap: wrap;
-                        gap: 15px 25px;
+			gap: 15px 25px;
 
 			&,
 			* {
 				display: flex;
 				flex-direction: row;
-                                text-decoration: none;
+				text-decoration: none;
 			}
 
 			li.elements {
@@ -72,11 +76,48 @@ div#home-section {
 					background: transparent;
 				}
 
-                                button,
-                                a {
-                                        cursor: pointer;
-                                        gap: 10px;
-                                }
+				button,
+				a {
+					cursor: pointer;
+					gap: 10px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 800px) {
+		padding: 100px 0;
+		gap: 25px;
+
+		* {
+			justify-content: center;
+			text-align: center;
+		}
+
+		div.information {
+			box-sizing: border-box;
+			padding: 0 25px;
+
+			div.top {
+				gap: 10px;
+
+				span.position,
+				h1.name {
+					gap: 10px;
+					height: fit-content;
+				}
+
+				h1.name {
+					font-size: 20px;
+				}
+
+				span.position {
+					font-size: 16px;
+				}
+			}
+
+			p.desciption {
+				font-size: 12px;
 			}
 		}
 	}

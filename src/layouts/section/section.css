@@ -4,7 +4,6 @@ section.page-section {
 	flex-direction: column;
 	height: fit-content;
 	min-height: 75dvh;
-	height: fit-content;
 	max-height: 100dvh;
 
 	&:first-of-type {
@@ -16,5 +15,9 @@ section.page-section {
 	&[data-name="Proyectos"] {
 		max-height: calc(100dvh - 60px);
 		min-height: calc(100dvh - 60px);
+	}
+	
+	&[data-name="Certificaciones"] {
+		min-height: calc(50dvh + 35px);
 	}
 }

@@ -20,7 +20,21 @@ footer.footer {
 			object-fit: cover;
 		}
 
+		@media (max-width: 1050px) {
+			flex-direction: column;
+			padding: 50px 10px 0;
+		}
+
 		div.external-links {
+			@media (max-width: 550px) {
+				flex-direction: column;
+
+				div.separator {
+					height: 5px !important;
+					width: 100% !important;
+				}
+			}
+
 			div.separator {
 				width: 5px;
 				height: 50px;
@@ -86,13 +100,20 @@ footer.footer {
 		box-sizing: border-box;
 		border: none;
 		border-top: 1px solid var(--seccond-accent);
-		
+
+		@media (max-width: 550px) {
+			flex-wrap: wrap;
+			text-align: center;
+			font-size: 12px;
+			height: fit-content;
+		}
+
 		a.highlighted {
 			color: var(--seccond-accent);
 			font-family: 'Satoshi-Bold';
 			text-shadow: 0px 0px 8px rgba(255, 0, 0, 0.4);
 			text-decoration: underline;
-			
+
 			&:hover {
 				color: var(--test-3);
 			}

@@ -15,6 +15,8 @@ h2.separator {
 	overflow: hidden;
 	margin: 0;
 	height: 35px;
+	min-height: 35px;
+	max-height: 35px;
 	box-shadow: 0 -4px 4px 0 #0f0f0f;
 	background-color: var(--background-50);
 

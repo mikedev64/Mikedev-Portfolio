@@ -1,0 +1,19 @@
+---
+import { CertificatesList } from './assets/constants';
+
+import './certificates.css';
+---
+
+<div class="achievements">
+	{
+		CertificatesList.map(({ title, image }) => (
+			<div class="certificate">
+				<img class="image"
+					src={image}
+					alt={`Mikeev Joan Sebastian Cardozo Salinas ${title}`}
+				/>
+				<span class="name">{title}</span>
+			</div>
+		))
+	}
+</div>

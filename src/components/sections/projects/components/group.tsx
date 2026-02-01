@@ -6,14 +6,14 @@ import ProjectsGalery from './galery';
 
 export default function GroupContent() {
 	const [Style, setStyle] = useState(
-		`background: linear-gradient(90deg, #0F0F0FE6 15%, rgba(15, 15, 15, 0.00) 100%), linear-gradient(0deg, #0F0F0FE6 25%, rgba(15, 15, 15, 0.00) 100%), url('${projects[selected.value].background[0]}') left / cover no-repeat`
+		`background: linear-gradient(90deg, #0F0F0FE6 15%, rgba(15, 15, 15, 0.00) 100%), linear-gradient(0deg, #0F0F0FE6 25%, rgba(15, 15, 15, 0.00) 100%), url('${projects[selected.value].background[0]}') center / cover no-repeat`
 	);
 	const [imagePosition, setImagePosition] = useState(0);
 
 	// Actualiza el estilo cuando cambia la posición de la imagen
 	useEffect(() => {
 		const currentImage = projects[selected.value].background[imagePosition];
-		const newStyle = `background: linear-gradient(90deg, #0F0F0FE6 15%, rgba(15, 15, 15, 0.00) 100%), linear-gradient(0deg, #0F0F0FE6 25%, rgba(15, 15, 15, 0.00) 100%), url('${currentImage}') left / cover no-repeat`;
+		const newStyle = `background: linear-gradient(90deg, #0F0F0FE6 15%, rgba(15, 15, 15, 0.00) 100%), linear-gradient(0deg, #0F0F0FE6 25%, rgba(15, 15, 15, 0.00) 100%), url('${currentImage}') center / cover no-repeat`;
 		setStyle(newStyle);
 	}, [imagePosition, selected.value]);
 
