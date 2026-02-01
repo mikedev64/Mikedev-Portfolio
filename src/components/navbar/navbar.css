@@ -146,7 +146,7 @@ nav#navbar.--component {
 							height: 30px;
 						}
 
-						&.Inicio a.Select * {
+						&.SobreMi a.Select * {
 							stop-color: var(--seccond-accent);
 							fill: var(--seccond-accent);
 							stroke: var(--seccond-accent);
@@ -156,13 +156,13 @@ nav#navbar.--component {
 							stroke: var(--seccond-accent);
 						}
 
-						&.Inicio * {
+						&.SobreMi * {
 							stop-color: var(--tertiary);
 							fill: var(--tertiary);
 							stroke: var(--tertiary);
 						}
 
-						&.Inicio:hover * {
+						&.SobreMi:hover * {
 							stop-color: var(--seccond-accent);
 							fill: var(--seccond-accent);
 							stroke: var(--seccond-accent);

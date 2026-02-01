@@ -55,8 +55,8 @@ async function navbarIconCheck(Element: HTMLAnchorElement, value?: string) {
 		pagePosition = value;
 	}
 
-	if (pagePosition.length === 0 || pagePosition === 'Inicio') {
-		if (Element.dataset.value === 'Inicio') {
+	if (pagePosition.length === 0 || pagePosition === 'SobreMi') {
+		if (Element.dataset.value === 'SobreMi') {
 			Element.classList.add('Select');
 			navbar__right__options_list__pc__selector.style.left = `${Element.offsetLeft - 5}px`;
 		} else {
