@@ -22,6 +22,6 @@ section.page-section {
 	}
 	
 	&[data-name="Certificaciones"] {
-		min-height: calc(50dvh + 35px);
+		min-height: calc(75dvh - 60px);
 	}
 }
