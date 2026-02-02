@@ -35,6 +35,10 @@ div.works {
 			min-width: 250px;
 			gap: 20px;
 
+			@media (max-width: 750px) {
+				align-items: center;
+			}
+
 			div.basic {
 				display: flex;
 				flex-direction: column;
@@ -67,6 +71,25 @@ div.works {
 					font-family: 'Satoshi-Bold';
 					color: var(--primary-accent);
 					font-size: 20px;
+				}
+
+				@media (max-width: 750px) {
+					* {
+						width: 100%;
+						text-align: center;
+					}
+
+					span.actual-job {
+						padding: 0;
+						display: grid;
+						place-content: center;
+						background: linear-gradient(
+							90deg,
+							transparent 0%,
+							var(--primary) 50%,
+							transparent 100%
+						);
+					}
 				}
 			}
 

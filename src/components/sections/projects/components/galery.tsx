@@ -3,8 +3,6 @@ import GaleryIcon from './icon';
 
 export default function ProjectsGalery() {
 	function ChangeInformation(increment: boolean) {
-		console.log('change');
-
 		let newValue: number;
 
 		if (increment) {

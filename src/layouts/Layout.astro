@@ -76,7 +76,11 @@ import Analytics from '@vercel/analytics/astro'
 			<slot />
 			<Footer />
 		</main>
+		<div data-open="false" class="expanded">
+			<img src="">
+		</div>
 		<SpeedInsights />
 		<Analytics />
 	</body>
+	<script src="./layout.ts"></script>
 </html>

@@ -16,13 +16,14 @@ body {
 	width: 100dvw;
 	height: 100dvh;
 	overflow: hidden;
-	
+
 	&::-webkit-scrollbar {
 		display: none;
 	}
 }
 
 body {
+	position: relative;
 	background-color: var(--background);
 }
 
@@ -71,4 +72,26 @@ img.topographic_left_down {
 
 *.expand-image {
 	cursor: pointer;
+}
+
+div.expanded {
+	position: absolute;
+	background: var(--background-50);
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100dvw;
+	height: 100dvh;
+	display: none;
+	place-items: center;
+	
+	&[data-open='true'] {
+		display: grid;
+	}
+	
+	img {
+		object-fit: contain;
+		width: 75dvw;
+		height: 75dvh;
+	}
 }

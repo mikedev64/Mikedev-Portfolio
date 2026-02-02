@@ -6,8 +6,6 @@ const IntersectionObserverConfig: IntersectionObserverInit = {
 	threshold: 0.50,
 };
 
-page_sections.forEach((El) => console.log(El.dataset.name));
-
 function IntersectionObserverCallback(entries: IntersectionObserverEntry[]) {
 	// @ts-ignore
 	entries.forEach(async (entry) => {
