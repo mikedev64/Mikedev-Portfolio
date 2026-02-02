@@ -5,7 +5,7 @@ import Twitter from './twitter.svg';
 import Youtube from './youtube.svg';
 
 export const footerFirstListElements = [
-	{
+	/* {
 		identifier: 'Youtube',
 		Icon: Youtube,
 		link: '',
@@ -18,7 +18,7 @@ export const footerFirstListElements = [
 		link: '',
 		ariaLabel: 'Lleva al area de inicio',
 		visible: true,
-	},
+	}, */
 	{
 		identifier: 'Pixiv',
 		Icon: Pixiv,

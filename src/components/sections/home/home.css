@@ -4,7 +4,7 @@ div#home-section {
 	align-items: center;
 	gap: 50px;
 	justify-content: center;
-	height: 100dvh;
+	height: 75dvh;
 
 	div.information {
 		width: fit-content;
