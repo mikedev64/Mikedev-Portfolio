@@ -8,7 +8,9 @@ import './certificates.css';
 	{
 		CertificatesList.map(({ title, image }) => (
 			<div class="certificate">
-				<img class="image"
+				<img
+					class="image expand-image"
+					data-src={image}
 					src={image}
 					alt={`Mikeev Joan Sebastian Cardozo Salinas ${title}`}
 				/>

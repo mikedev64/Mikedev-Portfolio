@@ -68,3 +68,7 @@ img.topographic_left_down {
 	left: -175.077px;
 	bottom: 0;
 }
+
+*.expand-image {
+	cursor: pointer;
+}

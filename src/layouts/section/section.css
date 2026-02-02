@@ -4,8 +4,9 @@ section.page-section {
 	flex-direction: column;
 	height: fit-content;
 	min-height: 75dvh;
-
+	
 	&:first-of-type {
+		min-height: 100dvh;
                 align-items: center;
                 justify-content: center;
 		box-sizing: border-box;
