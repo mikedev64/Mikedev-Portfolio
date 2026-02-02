@@ -25,9 +25,9 @@ export const listElements = [
 		Icon: Certificates,
 		ariaLabel: 'Lleva al area de Certificaciones',
 	},
-	{
+	/* {
 		identifier: 'Comisiones',
 		Icon: Commissions,
 		ariaLabel: 'Lleva al area de Comisiones',
-	},
+	}, */
 ];

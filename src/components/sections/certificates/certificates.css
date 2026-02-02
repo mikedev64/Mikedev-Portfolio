@@ -16,7 +16,7 @@ div.achievements {
         
 	@media (min-width: 1280px) {
                 & {
-                        gap: 50px;
+                        gap: 25px;
                         padding: 100px 0;
                         flex-wrap: wrap;
                         flex-direction: row;
@@ -32,7 +32,7 @@ div.achievements {
 		align-items: center;
 		width: 100%;
 		/* min-width: calc(400px + 100px); */
-		max-width: 550px;
+		max-width: 650px;
 		flex-shrink: 0;
 		scroll-snap-align: center;
 

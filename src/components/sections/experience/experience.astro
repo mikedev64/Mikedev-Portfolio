@@ -1,0 +1,48 @@
+---
+import { workExperience } from './assets/constants';
+import EnterpriseIconBackground from './components/enterprise-icon-background.astro';
+
+import './experience.css';
+---
+
+<div class="works">
+	{
+		workExperience.map(({ isActual, icon, name, position, Content, images }) => (
+			<div class:list={['work', isActual ? 'actual' : '']}>
+				<img
+					src={icon}
+					class="logo"
+					alt={`Joan Sebastian Cardozo Salinas ${name}`}
+					width="75"
+					height="75"
+				/>
+				<div class="information">
+					<div class="basic">
+						{isActual && (
+							<span class="actual-job">Actualemnte</span>
+						)}
+						<span class="position">{position}</span>
+						<h3 class="name">{name}</h3>
+					</div>
+					<div class="content">
+						<Content />
+					</div>
+					<div class="images">
+						{images.map((url) => (
+							<div class="container">
+								<img
+									class="expand-image"
+									data-src={url}
+									src={url}
+									alt={`Joan Sebastian Cardozo Salinas ${position} ${name}`}
+									width="200"
+								/>
+								<EnterpriseIconBackground />
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		))
+	}
+</div>

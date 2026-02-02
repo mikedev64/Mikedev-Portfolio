@@ -4,12 +4,15 @@ section.page-section {
 	flex-direction: column;
 	height: fit-content;
 	min-height: 75dvh;
-	max-height: 100dvh;
 
 	&:first-of-type {
                 align-items: center;
                 justify-content: center;
 		box-sizing: border-box;
+	}
+
+	&[data-name="Experiencia"] {
+		min-height: calc(100dvh - 60px);
 	}
 
 	&[data-name="Proyectos"] {

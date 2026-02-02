@@ -1,0 +1,138 @@
+div.works {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+	padding: 50px 0;
+
+	div.work {
+		width: 100%;
+		height: fit-content;
+		display: flex;
+		gap: 25px;
+		align-items: flex-start;
+		justify-content: center;
+
+		img.logo {
+			width: 75px;
+			height: 75px;
+			object-fit: cover;
+			outline: 4px solid var(--seccond-accent);
+		}
+
+		div.information {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			min-width: 250px;
+			gap: 20px;
+
+			div.basic {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 5px;
+
+				span.actual-job {
+					width: 100%;
+					height: 24px;
+					padding: 0 15px;
+					display: flex;
+					align-items: center;
+					font-family: 'Satoshi-Bold';
+					color: var(--seccond-accent);
+					background: linear-gradient(
+						90deg,
+						var(--primary) 0%,
+						transparent 100%
+					);
+					font-size: 18px;
+				}
+
+				span.position {
+					font-family: 'Satoshi-Medium';
+					color: var(--secondary);
+					font-size: 20px;
+				}
+
+				h3.name {
+					font-family: 'Satoshi-Bold';
+					color: var(--primary-accent);
+					font-size: 20px;
+				}
+			}
+
+			div.content {
+				width: fit-content;
+				max-width: 750px;
+
+				* {
+					font-family: 'Satoshi-Regular';
+					color: var(--seccond-accent);
+					font-size: 16px;
+
+					gap: 10px;
+
+					&.bold {
+						font-family: 'Satoshi-Bold';
+						font-size: 20px;
+					}
+				}
+
+				ul {
+					margin: 0 0 0 15px;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+				}
+			}
+
+			div.images {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				width: fit-content;
+				align-items: center;
+				justify-content: center;
+				gap: 20px;
+				position: relative;
+
+				div.container {
+					position: relative;
+					display: grid;
+					place-items: center;
+
+					svg {
+						transform: translateX(5px) translateY(10px);
+						position: absolute;
+						width: 100%;
+						height: 100%;
+					}
+
+					img {
+						box-shadow: 0 0 8px var(--background-50);
+						cursor: pointer;
+						border-radius: 5px;
+						z-index: 1;
+
+						&:hover {
+							transform: translateX(5px) translateY(10px);
+						}
+					}
+				}
+			}
+		}
+
+		&.actual {
+			& img.logo {
+				width: 75px;
+				height: 75px;
+				object-fit: cover;
+				outline: 4px solid var(--secondary);
+			}
+		}
+	}
+}
