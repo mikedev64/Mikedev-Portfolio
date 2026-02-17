@@ -108,6 +108,15 @@ div.works {
 						font-family: 'Satoshi-Bold';
 						font-size: 20px;
 					}
+					
+					@media (max-width: 700px) {
+						font-size: 12px;
+
+						&.bold {
+							font-family: 'Satoshi-Bold';
+							font-size: 16px;
+						}
+					}
 				}
 
 				ul {

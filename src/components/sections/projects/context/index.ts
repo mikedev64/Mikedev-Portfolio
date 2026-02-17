@@ -13,11 +13,6 @@ export const projects = [
 		background: ['/images/sections/projects/gamescriptjs-background.webp'],
 		link: [
 			{
-				type: 'main',
-				text: 'Enlace',
-				url: '',
-			},
-			{
 				type: 'normal',
 				text: 'GitHub',
 				url: 'https://github.com/mikedev64/GameScriptJs',
@@ -35,11 +30,6 @@ export const projects = [
 			'/images/sections/projects/steam-clon-background.webp',
 		],
 		link: [
-			{
-				type: 'main',
-				text: 'Enlace',
-				url: '',
-			},
 			{
 				type: 'normal',
 				text: 'GitHub',

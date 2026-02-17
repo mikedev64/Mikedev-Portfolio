@@ -40,11 +40,15 @@ span.tooltip {
 	transform: translateY(0);
 	transition: all 0.2s ease;
 	animation: 0.3s float cubic-bezier(0.4, 0, 0.2, 3) forwards;
-
+	
 	@starting-style {
 		transform: translateY(0);
 		padding: 0;
 		width: 0;
+	}
+	
+	@media (max-width: 700px) {
+		animation: 0.3s float-mobile cubic-bezier(0.4, 0, 0.2, 3) forwards;
 	}
 
 }
@@ -61,6 +65,9 @@ span.tooltip {
 		width: 0;
 	}
 
+	@media (max-width: 700px) {
+		animation: 0.3s unfloat-mobile cubic-bezier(0.4, 0, 0.2, 3) forwards;
+	}
 }
 
 @keyframes link {
@@ -119,6 +126,36 @@ span.tooltip {
 	}
 }
 
+@keyframes float-mobile {
+	0% {
+		left: 50%;
+		color: var(--secondary);
+		transform: translateY(100px) translateX(-50%);
+		padding: 0;
+		width: 0;
+	}
+
+	75% {
+		left: 50%;
+		color: var(--secondary);
+		transform: translateY(100px) translateX(-50%);
+		width: 0;
+	}
+
+	80% {
+		left: 50%;
+		padding: 0 2.5px;
+	}
+
+	100% {
+		left: 50%;
+		color: var(--background);
+		padding: 2.5px 10px;
+		transform: translateY(100px) translateX(-50%);
+		width: fit-content;
+	}
+}
+
 @keyframes unfloat {
 	0% {
 		left: 50%;
@@ -143,6 +180,35 @@ span.tooltip {
 		left: 50%;
 		color: var(--secondary);
 		transform: translateY(0) translateX(-50%);
+		padding: 0;
+		width: 0;
+	}
+}
+
+@keyframes unfloat-mobile {
+	0% {
+		left: 50%;
+		color: var(--background);
+		padding: 5px 10px;
+		transform: translateY(100px) translateX(-50%);
+		width: fit-content;
+	}
+
+	75% {
+		left: 50%;
+		padding: 0;
+	}
+
+	80% {
+		left: 50%;
+		transform: translateY(100px) translateX(-50%);
+		width: 0;
+	}
+
+	100% {
+		left: 50%;
+		color: var(--secondary);
+		transform: translateY(100px) translateX(-50%);
 		padding: 0;
 		width: 0;
 	}
