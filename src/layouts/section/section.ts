@@ -3,7 +3,7 @@ const page_sections = document.querySelectorAll('section.page-section') as NodeL
 const IntersectionObserverConfig: IntersectionObserverInit = {
 	root: null,
 	rootMargin: '0px',
-	threshold: 0.25,
+	threshold: 0.50,
 };
 
 function IntersectionObserverCallback(entries: IntersectionObserverEntry[]) {
@@ -14,7 +14,7 @@ function IntersectionObserverCallback(entries: IntersectionObserverEntry[]) {
 			'h2.separator'
 		) as HTMLHeadingElement;
 		
-		if (entry.isIntersecting && entry.intersectionRatio >= 0.25) {
+		if (entry.isIntersecting && entry.intersectionRatio >= 0.50) {
 			globalState.set('section', h2Element.dataset.value);
 			// Remover la clase active de todos los h2
 			page_sections.forEach((section) => {
