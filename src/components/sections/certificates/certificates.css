@@ -9,6 +9,7 @@ div.achievements {
 	scroll-snap-type: x mandatory;
         padding: 100px calc(50% - 250px);
 	box-sizing: border-box;
+	flex-wrap: wrap;
         
 	&::-webkit-scrollbar {
                 height: 0;

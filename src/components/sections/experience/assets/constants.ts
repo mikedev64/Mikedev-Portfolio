@@ -3,7 +3,6 @@ import Netlogistik from './netlogistik.astro';
 
 export const workExperience = [
 	{
-		isActual: true,
 		icon: '/images/sections/experience/miutab.webp',
 		name: 'MiuTab',
 		position: 'Desarrollador Web Frontend',

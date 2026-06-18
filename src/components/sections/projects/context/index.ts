@@ -4,7 +4,7 @@ import { signal } from '@preact/signals';
 export const selected = signal(0);
 
 export const projects = [
-	{
+	/* {
 		name: 'GameScriptJs - JavaScript 2D Game Engine',
 		description:
 			'Motor de videojuegos para experiencias 2D y novelas visuales en JavaScript o TypeScript. Integrando una arquitectura modular para extender y personalizar el flujo de desarrollo, ofreciendo un enfoque ordenado para proyectos de cualquier escala, incluyendo un editor personalizable con un estilo inspirado en Unity o Blender, permitiendo la exportación a PC y navegador',
@@ -18,7 +18,7 @@ export const projects = [
 				url: 'https://github.com/mikedev64/GameScriptJs',
 			},
 		],
-	},
+	}, */
 	{
 		name: 'Steam Clon IA',
 		description:
