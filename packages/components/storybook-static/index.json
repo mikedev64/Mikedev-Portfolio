@@ -1,0 +1,1 @@
+{"v":5,"entries":{"components-button--primary":{"type":"story","subtype":"story","id":"components-button--primary","name":"Primary","title":"Components/Button","importPath":"./src/Button/Button.stories.tsx","componentPath":"./src/Button/Button.tsx","tags":["dev","test","manifest","autodocs"],"exportName":"Primary"}}}

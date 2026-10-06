@@ -1,0 +1,7 @@
+packages:
+  - "packages/pages"
+  - "packages/components"
+  - "packages/libraries/PadFramework"
+  - "packages/libraries/States"
+allowBuilds:
+  esbuild: set this to true or false

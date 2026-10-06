@@ -1,0 +1,32 @@
+{
+  "name": "@mikedev/components",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json && vite build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "main": "./dist/components.umd.cjs",
+  "module": "./dist/components.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/components.js",
+      "require": "./dist/components.umd.cjs"
+    }
+  },
+  "dependencies": {
+    "preact": "^10.29.8"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "@types/node": "^24.13.3",
+    "@storybook/preact-vite": "^10.6.1",
+    "storybook": "^10.6.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}

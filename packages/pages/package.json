@@ -1,0 +1,28 @@
+{
+  "name": "@mikedev/pages",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json && vite build"
+  },
+  "main": "./dist/pages.umd.cjs",
+  "module": "./dist/pages.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/pages.js",
+      "require": "./dist/pages.umd.cjs"
+    }
+  },
+  "dependencies": {
+    "preact": "^10.29.8"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "@types/node": "^24.13.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}
